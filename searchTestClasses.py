@@ -855,7 +855,7 @@ class CornerHeuristicPacman(testClasses.TestCase):
         start_state = problem.getStartState()
         if searchAgents.cornersHeuristic(start_state, problem) > true_cost:
             grades.addMessage('FAIL: Inadmissible heuristic')
-            result.extend(["FAIL: Inadmissible heuristic",False,None,tok-tik])
+            result.extend(["FAIL: Inadmissible heuristic",False,None,None])
             return False
         tik = time.time()
         path = search.astar(problem, searchAgents.cornersHeuristic)
